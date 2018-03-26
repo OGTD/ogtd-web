@@ -17,7 +17,6 @@
 
   component/Lifecycle
   (start [this]
-;;   (r/render [:div "hey" "hello" [(-> GreetComponent (provide-state increment-service)(provide-state write-store) (provide-state count-store))]] (js/document.getElementById "app")
    (r/render [ui/MuiThemeProvider theme-defaults [:div [Card [ui/CardText "heya "]] [(-> GreetComponent (provide-state increment-service)(provide-state write-store) (provide-state count-store))]]] (js/document.getElementById "app")
     this))
   (stop [this]

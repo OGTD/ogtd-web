@@ -1,4 +1,4 @@
-(ns ogtd-web-2.routes
+(ns ogtd-web.routes
   (:require [clojure.java.io :as io]
             [compojure.core :refer [ANY GET PUT POST DELETE routes]]
             [compojure.route :refer [resources]]

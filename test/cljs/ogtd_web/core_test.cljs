@@ -1,4 +1,4 @@
-(ns ogtd-web-2.core-test
+(ns ogtd-web.core-test
   (:require-macros [cljs.test :refer (is deftest testing)])
   (:require [cljs.test]))
 

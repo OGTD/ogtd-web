@@ -1,6 +1,6 @@
-(defproject ogtd-web-2 "0.1.0-SNAPSHOT"
+(defproject ogtd-web "0.1.0-SNAPSHOT"
   :description "Open source gtd implementation"
-  :url "http://example.com/FIXME"
+  :url "https://github.com/OGTD/ogtd-web"
   :license {:name "GNU AGPLv3"}
 
   :dependencies [[org.clojure/clojure "1.8.0"]
@@ -17,9 +17,10 @@
                  [com.stuartsierra/component "0.3.2"]
                  [org.danielsz/system "0.4.0"]
                  [org.clojure/tools.namespace "0.2.11"]
-                 [reagent "0.7.0"]
+                 [cljsjs/react "15.6.2-4"]
+                 [cljsjs/react-dom "15.6.2-4"]
                  [koch "0.1.1"]
-                 [cljsjs/react "16.2.0-3"]
+                 [reagent "0.7.0"]
                  [reagent-material-ui "0.2.5"]]
 
   :plugins [[lein-cljsbuild "1.1.6"]
@@ -33,10 +34,10 @@
 
   :clean-targets ^{:protect false} [:target-path :compile-path "resources/public/js"]
 
-  :uberjar-name "ogtd-web-2.jar"
+  :uberjar-name "ogtd-web.jar"
 
   ;; Use `lein run` if you just want to start a HTTP server, without figwheel
-  :main ogtd-web-2.application
+  :main ogtd-web.application
 
   ;; nREPL by default starts in the :main namespace, we want to start in `user`
   ;; because that's where our development helper functions like (go) and
@@ -47,12 +48,12 @@
               [{:id "app"
                 :source-paths ["src/cljs" "src/cljc" "dev"]
 
-                :figwheel {:on-jsload "ogtd-web-2.system/reset"}
+                :figwheel {:on-jsload "ogtd-web.system/reset"}
 
                 :compiler {:main cljs.user
                            :optimizations :none
                            :asset-path "js/compiled/out"
-                           :output-to "resources/public/js/compiled/ogtd_web_2.js"
+                           :output-to "resources/public/js/compiled/ogtd_web.js"
                            :preloads [devtools.preload]
                            :external-config { :devtools/config {:features-to-install [:all]}}
                            :output-dir "resources/public/js/compiled/out"
@@ -61,14 +62,14 @@
                {:id "test"
                 :source-paths ["src/cljs" "test/cljs" "src/cljc" "test/cljc"]
                 :compiler {:output-to "resources/public/js/compiled/testable.js"
-                           :main ogtd-web-2.test-runner
+                           :main ogtd-web.test-runner
                            :optimizations :none}}
 
                {:id "min"
                 :source-paths ["src/cljs" "src/cljc"]
                 :jar true
-                :compiler {:main ogtd-web-2.system
-                           :output-to "resources/public/js/compiled/ogtd_web_2.js"
+                :compiler {:main ogtd-web.system
+                           :output-to "resources/public/js/compiled/ogtd_web.js"
                            :output-dir "target"
                            :source-map-timestamp true
                            :optimizations :advanced

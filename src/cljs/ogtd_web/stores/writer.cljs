@@ -1,4 +1,4 @@
-(ns ogtd-web-2.stores.writer
+(ns ogtd-web.stores.writer
   (:require [com.stuartsierra.component :as component]
             [clojure.core.async :as async :refer [chan go <! close!]]
             [koch.core :refer [kupdate]]

@@ -1,6 +1,6 @@
-(ns ogtd-web-2.common-test
+(ns ogtd-web.common-test
   #? (:cljs (:require-macros [cljs.test :refer (is deftest testing)]))
-  (:require [ogtd-web-2.common :as sut]
+  (:require [ogtd-web.common :as sut]
             #?(:clj [clojure.test :refer :all]
                :cljs [cljs.test])))
 

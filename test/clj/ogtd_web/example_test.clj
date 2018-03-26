@@ -1,4 +1,4 @@
-(ns ogtd-web-2.example-test
+(ns ogtd-web.example-test
   (:require [clojure.test :refer :all]))
 
 (deftest example-passing-test

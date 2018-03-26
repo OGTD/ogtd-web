@@ -1,5 +1,5 @@
 (ns user
-  (:require [ogtd-web-2.application]
+  (:require [ogtd-web.application]
             [com.stuartsierra.component :as component]
             [figwheel-sidecar.config :as fw-config]
             [figwheel-sidecar.system :as fw-sys]
@@ -7,10 +7,10 @@
             [reloaded.repl :refer [system init]]
             [ring.middleware.reload :refer [wrap-reload]]
             [figwheel-sidecar.repl-api :as figwheel]
-            [ogtd-web-2.config :refer [config]]))
+            [ogtd-web.config :refer [config]]))
 
 (defn dev-system []
-  (assoc (ogtd-web-2.application/app-system (config))
+  (assoc (ogtd-web.application/app-system (config))
     :figwheel-system (fw-sys/figwheel-system (fw-config/fetch-config))
     :css-watcher (fw-sys/css-watcher {:watch-paths ["resources/public/css"]})))
 

@@ -1,12 +1,12 @@
-(ns ogtd-web-2.application
+(ns ogtd-web.application
   (:gen-class)
   (:require [com.stuartsierra.component :as component]
             [system.components.endpoint :refer [new-endpoint]]
             [system.components.handler :refer [new-handler]]
             [system.components.middleware :refer [new-middleware]]
             [system.components.jetty :refer [new-web-server]]
-            [ogtd-web-2.config :refer [config]]
-            [ogtd-web-2.routes :refer [home-routes]]))
+            [ogtd-web.config :refer [config]]
+            [ogtd-web.routes :refer [home-routes]]))
 
 (defn app-system [config]
   (component/system-map
@@ -22,4 +22,4 @@
     (-> config
         app-system
         component/start)
-    (println "Started ogtd-web-2 on" (str "http://localhost:" (:http-port config)))))
+    (println "Started ogtd-web on" (str "http://localhost:" (:http-port config)))))

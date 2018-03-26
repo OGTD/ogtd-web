@@ -1,9 +1,9 @@
-(ns ogtd-web-2.system
+(ns ogtd-web.system
   (:require [com.stuartsierra.component :as component]
-            [ogtd-web-2.stores.incrementer :refer [new-increment-service]]
-            [ogtd-web-2.stores.writer :refer [new-write-store]]
-            [ogtd-web-2.stores.counter :refer [new-count-store]]
-            [ogtd-web-2.services.ui :refer [new-ui-service]]))
+            [ogtd-web.stores.incrementer :refer [new-increment-service]]
+            [ogtd-web.stores.writer :refer [new-write-store]]
+            [ogtd-web.stores.counter :refer [new-count-store]]
+            [ogtd-web.services.ui :refer [new-ui-service]]))
 
 (enable-console-print!)
 

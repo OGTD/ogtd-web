@@ -1,4 +1,4 @@
-(ns ogtd-web-2.components.greet
+(ns ogtd-web.components.greet
   (:require [clojure.core.async :as async :refer [go  >!]]
             [koch.core :refer [inject-state]]))
 

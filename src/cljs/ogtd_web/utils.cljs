@@ -1,4 +1,4 @@
-(ns ogtd-web-2.utils
+(ns ogtd-web.utils
   (:require [clojure.core.async :as async :refer [chan go >!]]))
 
 

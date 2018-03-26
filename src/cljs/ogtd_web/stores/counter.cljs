@@ -1,4 +1,4 @@
-(ns ogtd-web-2.stores.counter
+(ns ogtd-web.stores.counter
   (:require [com.stuartsierra.component :as component]
             [clojure.core.async :as async :refer [chan go go-loop <! >! close! timeout]]
             [koch.core :refer [kupdate logger-middleware]]

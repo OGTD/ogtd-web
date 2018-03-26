@@ -1,5 +1,5 @@
 (ns cljs.user
-  (:require [ogtd-web-2.system :as system]))
+  (:require [ogtd-web.system :as system]))
 
 (def go system/go)
 (def reset system/reset)

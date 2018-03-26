@@ -1,4 +1,4 @@
-(ns ogtd-web-2.stores.incrementer
+(ns ogtd-web.stores.incrementer
   (:require [com.stuartsierra.component :as component]
             [clojure.core.async :as async :refer [chan go <! close! timeout]]
             [koch.core :refer [kupdate]]

@@ -1,1 +1,7 @@
-Leiningen.gitignore
+resources/public/js/compiled/
+.#*
+target
+log
+.lein*
+.nrepl-port
+*.properties
